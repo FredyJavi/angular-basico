@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bases';
+  title:string = 'Contador App';
+  contador:number=0;
+  base:number=5;
+
+  contar(){
+    this.contador=this.contador+this.base
+  }
+  restar(){
+    if(this.contador<=0){
+      this.contador=this.contador
+    }
+    else{
+      this.contador=this.contador-this.base
+    }
+  }
 }
